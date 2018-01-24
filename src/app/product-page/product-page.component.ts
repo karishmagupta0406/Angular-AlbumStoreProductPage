@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductService } from '../product.service';
 import { Response } from '@angular/http/src/static_response';
 
 @Component({
@@ -9,10 +8,9 @@ import { Response } from '@angular/http/src/static_response';
 })
 export class ProductPageComponent implements OnInit {
   albumInfo;
-  constructor(private _productService: ProductService) { }
+  constructor() { }
 
   ngOnInit() {
-    this._productService.getAlbum(1).subscribe(response => this.albumInfo = response);
   }
 
 }
